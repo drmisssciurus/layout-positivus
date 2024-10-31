@@ -185,8 +185,5 @@ svg * {
   --transition-duration: 0.2s;
 }
 
-body {
-  background-color: var(--color-dark);
-}
 
 /*# sourceMappingURL=styles.css.map */
