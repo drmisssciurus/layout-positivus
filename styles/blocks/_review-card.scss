@@ -6,6 +6,12 @@
 	flex-direction: column;
 	row-gap: 48px;
 
+	@include mobile {
+		--reviewCardCornerWidth: 32px;
+		--reviewCardCornerOffsetLeft: 46px;
+		row-gap: 44px;
+	}
+
 	&__body {
 		position: relative;
 		border: 1px solid var(--color-accent);
@@ -23,6 +29,10 @@
 			rotate: 45deg;
 			clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 			translate: 0 -50%;
+		}
+
+		@include mobile {
+			padding: 30px;
 		}
 	}
 
