@@ -1076,6 +1076,11 @@ h4, .h4 {
   align-self: end;
   min-width: 269px;
 }
+@media (max-width: 480px) {
+  .team__button {
+    width: 100%;
+  }
+}
 
 .team-card {
   height: 100%;
@@ -1083,6 +1088,11 @@ h4, .h4 {
   border: var(--border);
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow);
+}
+@media (max-width: 767px) {
+  .team-card {
+    padding-inline: 50px;
+  }
 }
 .team-card__header {
   display: flex;
@@ -1113,7 +1123,13 @@ h4, .h4 {
   margin-bottom: 3px;
 }
 .team-card__body {
-  margin-top: 28px;
-  padding-top: 28px;
+  --teamCardBodyMarginTop: 28px;
+  margin-top: var(--teamCardBodyMarginTop);
+  padding-top: var(--teamCardBodyMarginTop);
   border-top: var(--border);
+}
+@media (max-width: 767px) {
+  .team-card__body {
+    --teamCardBodyMarginTop: 20px;
+  }
 }
