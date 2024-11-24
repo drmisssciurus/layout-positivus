@@ -324,7 +324,7 @@ h4, .h4 {
   --fieldInputTextColor: var(--color-dark);
   --fieldInputBgColor: var(--color-light);
   --fieldInputBorderColor: var(--color-dark);
-  --fieldInputPlaceholderColor: var(--color-dark-alt);
+  --fieldInputPlaceholderColor: var(--color-gray-alt);
   --fieldInputHoverBgColor: var(--color-accent);
   display: flex;
   flex-direction: column;
@@ -343,7 +343,7 @@ h4, .h4 {
   --fieldInputTextColor: var(--color-accent);
   --fieldInputBgColor: var(--color-dark-alt);
   --fieldInputBorderColor: var(--color-light);
-  --fieldInputPlaceholderColor: var(--color-gray-alt);
+  --fieldInputPlaceholderColor: var(--color-dark-alt);
   --fieldInputHoverBgColor: var(--color-dark);
 }
 .field__label {
@@ -1425,10 +1425,14 @@ h4, .h4 {
 
 .contact-us {
   position: relative;
-  padding: 60px 100px 80px;
-  background-color: var(--color-gray);
-  border-radius: var(--border-radius-large);
   overflow-x: hidden;
+}
+@media (min-width: 768px) {
+  .contact-us {
+    padding: 60px 100px 80px;
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius-large);
+  }
 }
 .contact-us::after {
   --contactUsImageOffsetY: 62px;
@@ -1441,14 +1445,44 @@ h4, .h4 {
   aspect-ratio: 1;
   background: url("../../images/contact-us-bg.svg") center/contain no-repeat;
 }
+@media (max-width: 1023px) {
+  .contact-us::after {
+    display: none;
+  }
+}
 .contact-us__form, .contact-us__body {
   display: flex;
   flex-direction: column;
 }
-.contact-us__form {
-  row-gap: 40px;
-  max-width: 556px;
+@media (max-width: 767px) {
+  .contact-us__request-types, .contact-us__body {
+    background-color: var(--color-gray);
+  }
+}
+@media (max-width: 767px) {
+  .contact-us__request-types {
+    padding: 40px 52px 36px;
+    border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+  }
+}
+@media (min-width: 1024px) {
+  .contact-us__form {
+    max-width: 556px;
+  }
+}
+@media (min-width: 768px) {
+  .contact-us__form {
+    row-gap: 40px;
+  }
 }
 .contact-us__body {
   row-gap: 25px;
+}
+@media (max-width: 767px) {
+  .contact-us__body {
+    row-gap: 20px;
+    padding: 10px 30px 50px;
+    border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+    margin-bottom: 30px;
+  }
 }

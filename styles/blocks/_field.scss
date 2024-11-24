@@ -3,7 +3,7 @@
   --fieldInputTextColor: var(--color-dark);
   --fieldInputBgColor: var(--color-light);
   --fieldInputBorderColor: var(--color-dark);
-  --fieldInputPlaceholderColor: var(--color-dark-alt);
+  --fieldInputPlaceholderColor: var(--color-gray-alt);
   --fieldInputHoverBgColor: var(--color-accent);
 
   display: flex;
@@ -23,7 +23,7 @@
     --fieldInputTextColor: var(--color-accent);
     --fieldInputBgColor: var(--color-dark-alt);
     --fieldInputBorderColor: var(--color-light);
-    --fieldInputPlaceholderColor: var(--color-gray-alt);
+    --fieldInputPlaceholderColor: var(--color-dark-alt);
     --fieldInputHoverBgColor: var(--color-dark);
   }
 
